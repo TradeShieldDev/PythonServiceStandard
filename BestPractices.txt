@@ -1,0 +1,10 @@
+
+
+1. Senstive information must be held in Environmental Variables
+2. The setup of a new VM must be from a global powershell script (global_setup.ps1)
+3. The once of setup of a new application / service will be from a powershell script (initial_setup.ps1)
+4. When running Python applications do it from a NSSM service that use relative paths
+5. Use a standard main.py for the initial python application
+6. All Python versions on VM level must be clean (No special modules) except for virtualenv
+7. All Python service MUST use a specific host Python version instance (Alias Python e.g. python39)
+8. All Python service must have a requirements.txt to specify required modules
