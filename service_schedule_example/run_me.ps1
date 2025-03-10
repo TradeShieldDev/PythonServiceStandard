@@ -11,6 +11,7 @@ Write-Host "Virtual environment activation: $activationPath"
 $mainPyPath = Join-Path $RootPath "main.py"
 
 # Choose which R Environment to use
+Remove-Item alias:R -Force
 Set-Alias -Name R -Value r36 -Force
 R --version
 
