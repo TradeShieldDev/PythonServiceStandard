@@ -3,7 +3,11 @@
 # 1. [requirements.txt] with all the modules needed for this application
 # 2. [run_me.ps1] with [relative] paths pointing to the [local_env] for python and then running the [main.py] 
 
-# Set Application Environment Variables (Sensitive settings)
+# Create environment Varibables (Sensitive Configs Only)
+# =================================================================================================
+# Important! Need to update the secrets before running or update them afterwards (DO NOT SAVE IN SOURCE CONTROL)
+
+[System.Environment]::SetEnvironmentVariable("ServiceOne_Secret", "ServiceOneSecret", "One 1 One 1")
 
 
 # Create local python instance
@@ -67,11 +71,6 @@ Start-Service $ServiceName
 Write-Host "Service $ServiceName installed and started successfully."
 
 
-# Create environment Varibables
-# =================================================================================================
-# Important! Need to update the secrets before running or update them afterwards (DO NOT SAVE IN SOURCE CONTROL)
-
-[System.Environment]::SetEnvironmentVariable("ServiceOne_Secret", "ServiceOneSecret", "One 1 One 1")
 
 
 
