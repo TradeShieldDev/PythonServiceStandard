@@ -25,10 +25,10 @@ nssm version
 ## ========================================================================
 
 # Install the specific Python version
-choco install python --version=3.9.13 --params '"/InstallDir:C:\Program Files\Python\Python39"' -y
+choco install python --version=3.9.13 -y # --params '"/InstallDir:C:\Program Files\Python\Python39"'
 
 # Set a PowerShell Alias for this version
-$python39path = "C:\Program Files\Python\Python39\python.exe"
+$python39path = "C:\Python39\python.exe"
 Set-Alias python39 $python39path
 python39 --version
 
@@ -42,10 +42,10 @@ python39 -m pip install --upgrade pip
 # ========================================================================
 
 # Install the specific Python version
-choco install python --version=3.10.11 --params '"/InstallDir:C:\Program Files\Python\Python310"' -y
+choco install python --version=3.10.11 -y # --params '"/InstallDir:C:\Program Files\Python\Python310"'
 
 # Set a PowerShell Alias for this version
-$python310path = "C:\Program Files\Python\Python310\python.exe"
+$python310path = "C:\Python310\python.exe"
 Set-Alias python310 $python310path
 python310 --version
 
@@ -58,22 +58,29 @@ python310 -m pip install --upgrade pip
 # [3] R VERSIONS
 # -----------------------------------------------------------------------
 # https://community.chocolatey.org/packages/R.Project#versionhistory
-
+# Note: Reference R.Project from latest down to oldest in order
 
 ## R 3.9
 ## ========================================================================
 
-choco install r.project --version=4.4.0 --params '"/InstallDir=C:\Program Files\R\R-4.4"' 
-$r44path = "C:\Program Files\R\R-4.4\bin\x64\R.exe"
+choco install r.project --version=4.4.0 --params '"/InstallDir=C:\Program Files\R\R-4.4.0"' -y
+$r44path = "C:\Program Files\R\R-4.4.0\bin\x64\R.exe"
 Set-Alias r44 $r44path
 r44 --version
 
 ## R 3.6.3
 ## ========================================================================
 
-choco install r.project --version=3.6.3 --params '"/InstallDir=C:\Program Files\R\R-3.6"' 
-$r36path = "C:\Program Files\R\R-3.6\bin\x64\R.exe"
+choco install r.project --allow-downgrade --version=3.6.3 --params '"/InstallDir=C:\Program Files\R\R-3.6.3"' -y
+$r36path = "C:\Program Files\R\R-3.6.3\bin\x64\R.exe"
 Set-Alias r363 $r36path
-r36 --version
+r363 --version
 
 
+
+# =========================================================================
+# Chocolatey Commands
+# =========================================================================
+
+# choco list                                Shows all the installed local packages
+# choco uninstall <packageName>             Uninstall a specific local p
