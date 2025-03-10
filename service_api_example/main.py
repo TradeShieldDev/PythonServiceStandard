@@ -1,15 +1,9 @@
-import asyncio
-from src.api_service import ApiService
 
+from fastapi import FastAPI
 
-def start():
-    ## Get delay from config
-    api_service = ApiService()
-    asyncio.run(api_service.start())
+app = FastAPI()
 
-start()
-
-
-
-
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
 

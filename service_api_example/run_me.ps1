@@ -19,7 +19,20 @@ R --version
 python --version
 
 # Run the main python file from the virtual environment
-python $mainPyPath
+# Function to start the FastAPI app using uvicorn
+function Start-FastAPI {
+    uvicorn main:app --host 127.0.0.1 --port 8000 --reload
+}
+
+# Start the app, restart if it stops unexpectedly
+do {
+    Write-Host "Starting FastAPI Service..."
+    Start-FastAPI
+    Write-Host "FastAPI Service stopped unexpectedly. Restarting in 10 seconds..."
+    Start-Sleep -Seconds 10
+}
+while ($true)
+
 
 # Uncomment the below for local debugging
 # Read-Host

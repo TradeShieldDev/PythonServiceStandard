@@ -38,7 +38,7 @@ $displayName = "Company Name - Schedule Example Service"
 # Optionally set some service parameters (example: DisplayName and start mode)
 & nssm set $serviceName DisplayName $displayName
 & nssm set $serviceName Start SERVICE_AUTO_START
-& sc.exe config $serviceName start= delayed-auto
+& sc.exe config $serviceName start=delayed-auto
 
 # Start the newly installed service
 & nssm start $serviceName
@@ -51,7 +51,7 @@ $displayName = "Company Name - Schedule Example Service"
 
 <# This will uninstall the above service
 
-$serviceName = "PRE-ApiExampleService"
+$serviceName = "PRE-ScheduleExampleService"
 & nssm stop $serviceName
 & nssm remove $serviceName confirm
 

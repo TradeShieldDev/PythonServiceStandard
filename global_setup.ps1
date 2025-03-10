@@ -98,3 +98,4 @@ r36 --version
 # Alias Commands
 # =========================================================================
 # notepad $PROFILE.AllUsersAllHosts			View the persisted Aliases
+# Remove-Item alias:R -Force
