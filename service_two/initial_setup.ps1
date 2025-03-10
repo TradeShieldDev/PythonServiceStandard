@@ -21,8 +21,8 @@ pip install -r requirements.txt
 # =================================================================================================
 
 param(
-    [string]$ServiceName = "TS_ServiceOne",
-    [string]$DisplayName = "Trade Shield Service One",
+    [string]$ServiceName = "PRE-ServiceTwo",
+    [string]$DisplayName = "Company - Service Two",
     [string]$Description = "Service to run main.py in a local Python environment via run_me.ps1"
 )
 
