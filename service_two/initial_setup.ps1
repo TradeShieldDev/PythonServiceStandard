@@ -69,11 +69,10 @@ Write-Host "Service $ServiceName installed and started successfully."
 
 # Create environment Varibables
 # =================================================================================================
+# Important! Need to update the secrets before running or update them afterwards (DO NOT SAVE IN SOURCE CONTROL)
 
-# Important Please Update Password
+[System.Environment]::SetEnvironmentVariable("ServiceTwo_Secret", "ServiceTwoSecret", "Two 2 Two 2")
 
-[System.Environment]::SetEnvironmentVariable("ServiceA_Username", "YourServiceAUsername", "Username")
-[System.Environment]::SetEnvironmentVariable("ServiceB_Password", "YourServiceBPassword", "XXXXXXXXXXXXXXXXXX")
 
 
 

@@ -67,6 +67,13 @@ Start-Service $ServiceName
 Write-Host "Service $ServiceName installed and started successfully."
 
 
+# Create environment Varibables
+# =================================================================================================
+# Important! Need to update the secrets before running or update them afterwards (DO NOT SAVE IN SOURCE CONTROL)
+
+[System.Environment]::SetEnvironmentVariable("ServiceOne_Secret", "ServiceOneSecret", "One 1 One 1")
+
+
 
 
 
