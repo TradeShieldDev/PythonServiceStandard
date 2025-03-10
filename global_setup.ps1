@@ -11,37 +11,69 @@ Set-ExecutionPolicy Bypass -Scope Process -Force
 iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 choco -v
 
-# [1] Non Sucking Service (NSS)
+# Non Sucking Service (NSS)
 # =======================================================================
-# [1.1] Install NSS to "c:\Program Files\NSS"
-Invoke-WebRequest -Uri "URL_TO_NSSM_ZIP" -OutFile "C:\path\to\nssm.zip"
-Expand-Archive -LiteralPath "C:\path\to\nssm.zip" -DestinationPath "C:\Program Files\NSS" -Force
+choco install nssm --yes
 nssm version
-???
 
-# PYTHON VERSIONS
+# [2] PYTHON VERSIONS
+# -----------------------------------------------------------------------
+# https://community.chocolatey.org/packages/python#versionhistory
 
-# [2] PYTHON 3.9
+
+## PYTHON 3.9
+## ========================================================================
+
+# Install the specific Python version
+choco install python --version=3.9.13 --params '"/InstallDir:C:\Program Files\Python\Python39"' -y
+
+# Set a PowerShell Alias for this version
+$python39path = "C:\Program Files\Python\Python39\python.exe"
+Set-Alias python39 $python39path
+python39 --version
+
+# Install virtual environment package
+python39 -m pip install virtualenv
+
+#  Update PIP
+python39 -m pip install --upgrade pip
+
+# Python 3.10
 # ========================================================================
 
-# [2.1] Update PIP
+# Install the specific Python version
+choco install python --version=3.10.11 --params '"/InstallDir:C:\Program Files\Python\Python310"' -y
 
-# [2.2] Install virtual environment package
+# Set a PowerShell Alias for this version
+$python310path = "C:\Program Files\Python\Python310\python.exe"
+Set-Alias python310 $python310path
+python310 --version
 
-# [2.3] Set an alias for the this python instance
-echo "alias python3=/bin/python3" >> ~/.bashrc
+# Install virtual environment package
+python310 -m pip install virtualenv
+
+#  Update PIP
+python310 -m pip install --upgrade pip
+
+# [3] R VERSIONS
+# -----------------------------------------------------------------------
+# https://community.chocolatey.org/packages/R.Project#versionhistory
 
 
-# [3] Python 3.10
-# ========================================================================
+## R 3.9
+## ========================================================================
 
-# [3.1] Update PIP
+choco install r.project --version=4.4.0 --params '"/InstallDir=C:\Program Files\R\R-4.4"' 
+$r44path = "C:\Program Files\R\R-4.4\bin\x64\R.exe"
+Set-Alias r44 $r44path
+r44 --version
 
-# [3.2] Install virtual environment package
+## R 3.6.3
+## ========================================================================
 
-# [3.3] Set an alias for the this python instance
+choco install r.project --version=3.6.3 --params '"/InstallDir=C:\Program Files\R\R-3.6"' 
+$r36path = "C:\Program Files\R\R-3.6\bin\x64\R.exe"
+Set-Alias r363 $r36path
+r36 --version
 
 
-# INSTALL ALL THE R VERSIONS THAT APPS WILL NEED
-rvm install R-4.1.0
-rvm install R-3.6.3
