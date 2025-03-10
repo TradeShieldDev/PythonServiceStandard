@@ -5,6 +5,8 @@ This spike shows the basic setup and structure that Python/R applications should
 ## Server Setup
 - [x] Packaged managed multiple (thin) Python version support with Alias
 - [x] Packaged and managed multiple versions of R
+- [x] Create NSSM Windows Services for all Python services (Using relative paths)
+- [x] Never use the host Python versions to run or add modules, each application must have its own virtual environment
 
 
 ## Application Setup
@@ -12,3 +14,5 @@ This spike shows the basic setup and structure that Python/R applications should
 - [x] Include [run_me.ps1] script for the Windows Service to start the Python Application
 - [x] Include [requirements.txt] to ensure all the required modules are installed
 - [x] Always use [main.py] as the starting Python file for all applications
+- [x] For sensitive information define and use Environment Variables in the initial setup script (No Sensitive Information in Source Control)
+- [x] For normal configurations use [config.ini] for basic configurations or [app_config.json] for nested config structures
