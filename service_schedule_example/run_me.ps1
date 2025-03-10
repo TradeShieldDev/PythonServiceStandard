@@ -1,25 +1,28 @@
 Write-Host "Starting Python service from virtual environment..."
 
-# We use $PSScriptRoot if available (PowerShell v3+). Otherwise fallback
-if ($PSScriptRoot) {
-    $scriptDir = $PSScriptRoot
-} else {
-    $scriptDir = Split-Path -Parent -Path $MyInvocation.MyCommand.Definition
-}
+$RootPath = $PSScriptRoot
 
-Write-Host "Starting Python script from local environment..."
+$pythonPath = Join-Path $RootPath "local_env\Scripts\python.exe"
+Write-Host "Script directory: $RootPath"
 
-# Build relative paths to the Python interpreter and main.py
-$pythonPath = Join-Path $scriptDir ".\local_env\Scripts\python.exe"
-$mainPyPath = Join-Path $scriptDir ".\main.py"
+$activationPath = Join-Path $RootPath "local_env\Scripts\Activate.ps1"
+Write-Host "Virtual environment activation: $activationPath"
 
-# Set the correct R version to use for this application
-rvm use R-4.1.0
+$mainPyPath = Join-Path $RootPath "main.py"
 
-# Running the main.py from the local virtual python
-& $pythonPath $mainPyPath
+# Choose which R Environment to use
+Set-Alias -Name R -Value r36 -Force
+R --version
 
-Write-Host "Python service has stopped."
+# Activate Virtual Environmen and print Python Version
+. $activationPath
+python --version
+
+# Run the main python file from the virtual environment
+python $mainPyPath
 
 # Uncomment the below for local debugging
 # Read-Host
+
+Write-Host "Python service has stopped."
+

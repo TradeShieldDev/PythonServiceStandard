@@ -11,6 +11,11 @@ Set-ExecutionPolicy Bypass -Scope Process -Force
 iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 choco -v
 
+# Create new Alias Profile (Persist alias with reboot)
+New-Item -Path $PROFILE.AllUsersAllHosts -Type File -Force
+$PROFILE | Select-Object -Property AllUsersAllHosts
+	
+	
 # Non Sucking Service (NSS)
 # =======================================================================
 choco install nssm --yes
@@ -27,9 +32,9 @@ nssm version
 # Install the specific Python version
 choco install python --version=3.9.13 -y # --params '"/InstallDir:C:\Program Files\Python\Python39"'
 
-# Set a PowerShell Alias for this version
-$python39path = "C:\Python39\python.exe"
-Set-Alias python39 $python39path
+# Set a PowerShell Alias for this version on the Global Profile
+Add-Content -Path $PROFILE.AllUsersAllHosts -Value 'Set-Alias -Name python39 -Value "C:\Python39\python.exe"'
+. $PROFILE.AllUsersAllHosts
 python39 --version
 
 # Install virtual environment package
@@ -45,8 +50,8 @@ python39 -m pip install --upgrade pip
 choco install python --version=3.10.11 -y # --params '"/InstallDir:C:\Program Files\Python\Python310"'
 
 # Set a PowerShell Alias for this version
-$python310path = "C:\Python310\python.exe"
-Set-Alias python310 $python310path
+Add-Content -Path $PROFILE.AllUsersAllHosts -Value 'Set-Alias -Name python310 -Value "C:\Python310\python.exe"'
+. $PROFILE.AllUsersAllHosts
 python310 --version
 
 # Install virtual environment package
@@ -60,21 +65,24 @@ python310 -m pip install --upgrade pip
 # https://community.chocolatey.org/packages/R.Project#versionhistory
 # Note: Reference R.Project from latest down to oldest in order
 
+# Remove the default R alias so that you can specify the version per application
+Remove-Item alias:R -Force
+
 ## R 3.9
 ## ========================================================================
 
 choco install r.project --version=4.4.0 --params '"/InstallDir=C:\Program Files\R\R-4.4.0"' -y
-$r44path = "C:\Program Files\R\R-4.4.0\bin\x64\R.exe"
-Set-Alias r44 $r44path
+Add-Content -Path $PROFILE.AllUsersAllHosts -Value 'Set-Alias -Name r44 -Value "C:\Program Files\R\R-4.4.0\bin\x64\R.exe"'
+. $PROFILE.AllUsersAllHosts
 r44 --version
 
 ## R 3.6.3
 ## ========================================================================
 
 choco install r.project --allow-downgrade --version=3.6.3 --params '"/InstallDir=C:\Program Files\R\R-3.6.3"' -y
-$r36path = "C:\Program Files\R\R-3.6.3\bin\x64\R.exe"
-Set-Alias r363 $r36path
-r363 --version
+Add-Content -Path $PROFILE.AllUsersAllHosts -Value 'Set-Alias -Name r36 -Value "C:\Program Files\R\R-3.6.3\bin\x64\R.exe"'
+. $PROFILE.AllUsersAllHosts
+r36 --version
 
 
 
@@ -83,4 +91,10 @@ r363 --version
 # =========================================================================
 
 # choco list                                Shows all the installed local packages
-# choco uninstall <packageName>             Uninstall a specific local p
+# choco uninstall <packageName>             Uninstall a specific local Package
+
+
+# =========================================================================
+# Alias Commands
+# =========================================================================
+# notepad $PROFILE.AllUsersAllHosts			View the persisted Aliases

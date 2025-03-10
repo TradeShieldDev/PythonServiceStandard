@@ -169,3 +169,5 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+/service_schedule_example/local_env
+/service_api_example/local_env
