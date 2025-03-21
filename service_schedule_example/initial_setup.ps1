@@ -6,7 +6,7 @@
 # Set Application Environment Variables (Sensitive settings)
 # =================================================================================================
 # Important! Need to update the secrets before running or update them afterwards (DO NOT SAVE IN SOURCE CONTROL)
-[System.Environment]::SetEnvironmentVariable("ScheduleService_Secret", "ScheduleServiceSecret", "XXXX-XXXXX-XXX")
+[System.Environment]::SetEnvironmentVariable("ScheduleService_Secret", "ScheduleServiceSecret", "1234-56789-0000")
 
 # Load Aliases
 # ==============================================================================================
@@ -44,24 +44,41 @@ $displayName = "Company Name - Schedule Example Service"
 & nssm start $serviceName
 
 
-
 # =========================================================================
-# NSSM Commands
+# VS Code
 # =========================================================================
+<# This will setup the virtual environment for VS Code
 
-<# This will uninstall the above service
-
-$serviceName = "PRE-ScheduleExampleService"
-& nssm stop $serviceName
-& nssm remove $serviceName confirm
+	Make sure you installed the Python extention
+	Select VS Code Interpretor: Ctrl+Shift+P > [python: Select Interpreter]
 
 #>
 
 
 # =========================================================================
+# NSSM Commands
+# =========================================================================
+<# This will uninstall the above service
+
+	$serviceName = "PRE-ScheduleExampleService"
+	& nssm stop $serviceName
+	& nssm remove $serviceName confirm
+
+#>
+
+# =========================================================================
 # PIP Commands
 # =========================================================================
-# pip freeze > requirements.txt              Save all the current modules
+<#
+	pip freeze > requirements.txt              Save all the current modules
+#>
+
+# =========================================================================
+# PowerShell Script Execution Context
+# =========================================================================
+<#
+	Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
+#>
 
 
 
