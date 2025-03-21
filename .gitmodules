@@ -1,0 +1,6 @@
+[submodule "service_api_example/sdk"]
+	path = service_api_example/sdk
+	url = https://github.com/TradeShieldDev/SeedworksPython.git
+[submodule "service_schedule_example/sdk"]
+	path = service_schedule_example/sdk
+	url = https://github.com/TradeShieldDev/SeedworksPython.git
