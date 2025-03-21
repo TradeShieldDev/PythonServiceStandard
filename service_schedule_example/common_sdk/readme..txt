@@ -1,1 +1,0 @@
-This is typically a Git Submodule where all the projects reference the same common libraries.
