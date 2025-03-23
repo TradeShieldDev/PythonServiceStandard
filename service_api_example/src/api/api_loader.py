@@ -13,7 +13,6 @@ def start_apis(app: FastAPI) -> None:
     # Initialize your API classes and attach them to the main app.
     logger.info('Loading all the API''s configured in the application...')
 
-
     # ------------------------ Health API Setup -------------------------- #
     health_router = create_health_router(HealthChecks.generate_checks())
     app.include_router(health_router)
@@ -27,10 +26,3 @@ def start_apis(app: FastAPI) -> None:
     calculator_api = CalculatorAPI()
     app.include_router(calculator_api.router, prefix="/calculator", tags=["example"])
 
-
-
-    # If you have more APIs, you can keep adding them:
-    # another_api = AnotherAPI()
-    # app.include_router(another_api.router, prefix="/another", tags=["another"])
-
-    # Optionally, do other startup steps here, like DB connections, logging config, etc.
