@@ -37,5 +37,5 @@ This spike shows the basic setup and structure that Python/R applications should
 
 ### API Examples
 - [ ]  Use [app_config.json] when there are complex multi-level config needs
-- [ ]  Python 3.10 with R.Project 3.9
+- [ ]  Python 3.10 with R.Project 4.4.0
 
