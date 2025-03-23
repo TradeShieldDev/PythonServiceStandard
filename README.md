@@ -13,6 +13,11 @@ This spike shows the basic setup and structure that Python/R applications should
 - [x] Common SDK / Seedworks project for the common utilities (Instrumentation, Configuration, etc)
 - [ ] MNake use of logger with file rollover (size/day) and archiving mechanism
 
+## General things to avoid in Python
+- [ ] DB management, SQL Alchemy is not as advanced as Entity Framework (If possible). Try avoiding DB interactions else, keep it simple.
+- [ ] Highly concurrent applications, if this is needed, wrap Python in a C# host that has multiple Python instance pools
+- [ ] Shared infrastructure, build things like Message Brokers and Event Sourcing in C# for optimal performance 
+
 ## General Application Setup
 - [x] Include [initial_setup.ps1] PowerShell script to assist in the consistent setup of the service
 - [x] Include [run_me.ps1] script for the Windows Service to start the Python Application
