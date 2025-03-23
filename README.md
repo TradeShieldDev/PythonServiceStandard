@@ -34,5 +34,5 @@ This spike shows the basic setup and structure that Python/R applications should
 - [x] Use [config.ini] for basic Section + Key-Value configurations
 
 ### API Examples
-- [ ]  Use [app_config.json] for nested config requirements
+- [ ]  Use [app_config.json] when there are complex multi-level config needs
 
