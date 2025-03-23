@@ -6,14 +6,15 @@ This spike shows the basic setup and structure that Python/R applications should
 - [x] Packaged and managed multiple versions of R
 - [x] Create NSSM Windows Services for all Python services (Using relative paths)
 - [x] Never use the host Python versions to run or add modules; each application must have its virtual environment
+- [x] Mono Repo - Reduces the need for complex interdependent package management
 
 ## General Python
 - [x] Pydantic Types, i.e., Variables, are declared with specific data types
 - [x] [snake_notation] for everything except class names, which are [Title Case]
 - [x] Common SDK / Seedworks project for the common utilities (Instrumentation, Configuration, etc)
-- [x] Make use of logger with file rollover (size/day) and archiving mechanism
+- [x] Make use of a logger with file rollover (size/day) and archiving mechanism
 - [ ] Include IsAlive / External Health Check
-- [ ] Low level performance counters for Attemp-Success-Failure
+- [ ] Low-level performance counters for Attempt-Success-Failure
 
 ## General things to avoid in Python
 - [ ] DB management, SQL Alchemy is not as advanced as Entity Framework (If possible). Try avoiding DB interactions else, keep it simple.
@@ -32,7 +33,9 @@ This spike shows the basic setup and structure that Python/R applications should
 
 ### Schedule Example
 - [x] Use [config.ini] for basic Section + Key-Value configurations
+- [x] Python 3.9 with R.Project 3.6.3
 
 ### API Examples
 - [ ]  Use [app_config.json] when there are complex multi-level config needs
+- [ ]  Python 3.10 with R.Project 3.9
 
