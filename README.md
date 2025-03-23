@@ -11,7 +11,7 @@ This spike shows the basic setup and structure that Python/R applications should
 - [x] Pydantic Types, i.e., Variables, are declared with specific data types
 - [x] [snake_notation] for everything except class names, which are [Title Case]
 - [x] Common SDK / Seedworks project for the common utilities (Instrumentation, Configuration, etc)
-- [x] MNake use of logger with file rollover (size/day) and archiving mechanism
+- [x] Make use of logger with file rollover (size/day) and archiving mechanism
 - [ ] Include IsAlive / External Health Check
 - [ ] Low level performance counters for Attemp-Success-Failure
 
