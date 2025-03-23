@@ -25,7 +25,7 @@ This spike shows the basic setup and structure that Python/R applications should
 - [x] Include [run_me.ps1] script for the Windows Service to start the Python Application
 - [x] Include [requirements.txt] to ensure all the required modules are installed
 - [x] Always use [main.py] as the starting Python file for all applications
-- [x] For sensitive information, define and use Environment Variables in the initial setup script (No Sensitive Information in Source Control)
+- [ ] For sensitive information, define and use Environment Variables in the initial setup script (No Sensitive Information in Source Control)
 
 
 ## Example Services
