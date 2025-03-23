@@ -12,6 +12,8 @@ This spike shows the basic setup and structure that Python/R applications should
 - [x] [snake_notation] for everything except class names, which are [Title Case]
 - [x] Common SDK / Seedworks project for the common utilities (Instrumentation, Configuration, etc)
 - [x] MNake use of logger with file rollover (size/day) and archiving mechanism
+- [ ] Include IsAlive / External Health Check
+- [ ] Low level performance counters for Attemp-Success-Failure
 
 ## General things to avoid in Python
 - [ ] DB management, SQL Alchemy is not as advanced as Entity Framework (If possible). Try avoiding DB interactions else, keep it simple.
