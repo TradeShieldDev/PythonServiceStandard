@@ -13,11 +13,12 @@ This spike shows the basic setup and structure that Python/R applications should
 - [x] [snake_notation] for everything except class names, which are [Title Case]
 - [x] Common SDK / Seedworks project for the common utilities (Instrumentation, Configuration, etc)
 - [x] Make use of a logger with file rollover (size/day) and archiving mechanism
-- [ ] Include IsAlive / External Health Check
+- [x] Include IsAlive / External Health Check
 - [ ] Low-level performance counters for Attempt-Success-Failure
 
+
 ## General things to avoid in Python
-- [ ] DB management, SQL Alchemy is not as advanced as Entity Framework (If possible). Try avoiding DB interactions else, keep it simple.
+- [ ] DB management, SQL Alchemy is not as advanced as Entity Framework (If possible). Try avoiding DB interactions otherwise, keep it simple.
 - [ ] Highly concurrent applications, if this is needed, wrap Python in a C# host that has multiple Python instance pools
 - [ ] Shared infrastructure, build things like Message Brokers and Event Sourcing in C# for optimal performance 
 
@@ -36,6 +37,8 @@ This spike shows the basic setup and structure that Python/R applications should
 - [x] Python 3.9 with R.Project 3.6.3
 
 ### API Examples
-- [ ]  Use [app_config.json] when there are complex multi-level config needs
-- [ ]  Python 3.10 with R.Project 4.4.0
+- [x]  Use [app_config.json] when there are complex multi-level config needs
+- [x]  Python 3.10 with R.Project 4.4.0
+- [x]  FastAPI, including Standard Health API, extended with custom health checks
 
+![image](https://github.com/user-attachments/assets/9cf4a864-d1ae-48c6-a5d5-da8d40e00c84)
