@@ -6,12 +6,8 @@ from sdk.config.config_loader import ConfigManager, DataType
 from sdk.logging.logger import Logger
 from src.config.sections import ConfigSections
 
-import select
-import sys
-import keyboard
-
 config:ConfigManager = ConfigManager.get_instance()
-logger:Logger = Logger.get_instance()
+logger = Logger.get_instance()
 
 stop_event = threading.Event()
 
@@ -23,13 +19,14 @@ def key_press_listener():
 
 async def start():
 
-    delay_in_seconds = config.get_ini_config_value(ConfigSections.ScheduleDetails, 'delay_in_seconds', 10, DataType.Integer)
+    delay_in_seconds = config.get_ini_key_value(ConfigSections.ScheduleDetails, 'delay_in_seconds', 10, DataType.Integer)
+    environment = config.get_ini_key_value(ConfigSections.General, 'environment', None)
     
     ## Get delay from config
     scheduler = Scheduler(delay_in_seconds)
 
     task = asyncio.create_task(scheduler.start())
-    print("Press 'ESC' key to stop...")
+    print(f"Started in [{environment}]. Press 'ESC' key to stop...")
 
     # Start the thread for listening to keyboard input
     listener_thread = threading.Thread(target=key_press_listener)
