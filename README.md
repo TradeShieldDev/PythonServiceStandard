@@ -29,7 +29,7 @@ This spike shows the basic setup and structure that Python/R applications should
 ## Example Services
 
 ### Schedule Example
-- [ ] Use [config.ini] for basic key-value configurations
+- [x] Use [config.ini] for basic key-value configurations
 
 ### API Examples
 - [ ]  Use [app_config.json] for nested config requirements
