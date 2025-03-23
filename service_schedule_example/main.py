@@ -11,7 +11,7 @@ import sys
 import keyboard
 
 config:ConfigManager = ConfigManager.get_instance()
-logger = Logger.get_instance()
+logger:Logger = Logger.get_instance()
 
 stop_event = threading.Event()
 

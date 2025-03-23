@@ -1,0 +1,10 @@
+{
+    "environment": "Dev",
+    "logging": {
+		"level": "trace",
+        "file_name": "app.log",
+        "path": "logs//",
+        "max_file_size": 50,
+        "max_retention_days": 60
+    }
+}

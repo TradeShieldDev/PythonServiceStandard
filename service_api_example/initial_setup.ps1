@@ -44,26 +44,70 @@ $displayName = "Company Name - API Example Service"
 & nssm start $serviceName
 
 
+# =========================================================================
+# VS Code
+# =========================================================================
+<# This will setup the virtual environment for VS Code
+
+	Make sure you installed the Python extention
+	Select VS Code Interpretor: Ctrl+Shift+P > [python: Select Interpreter]
+	
+	Create Lauch.json file to run FastAPI
+	------------------------------------------------------------
+	
+	{
+		// Use IntelliSense to learn about possible attributes.
+		// Hover to view descriptions of existing attributes.
+		// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+		"version": "0.2.0",
+		"configurations": [
+
+			{
+				"name": "FastAPI (Uvicorn)",
+				"type": "debugpy",
+				"request": "launch",
+				"module": "uvicorn",
+				// In "args", specify main:app plus any flags you need
+				"args": [
+				  "main:app",
+				  "--host",
+				  "127.0.0.1",
+				  "--port",
+				  "8000",
+				  "--reload"
+				],
+				"console": "integratedTerminal"
+			}
+		]
+	}
+	
+
+#>
 
 # =========================================================================
 # NSSM Commands
 # =========================================================================
-
 <# This will uninstall the above service
 
-$serviceName = "PRE-ApiExampleService"
-& nssm stop $serviceName
-& nssm remove $serviceName confirm
+	$serviceName = "PRE-ScheduleExampleService"
+	& nssm stop $serviceName
+	& nssm remove $serviceName confirm
 
 #>
-
 
 # =========================================================================
 # PIP Commands
 # =========================================================================
-# pip freeze > requirements.txt              Save all the current modules
+<#
+	pip freeze > requirements.txt              Save all the current modules
+#>
 
-
+# =========================================================================
+# PowerShell Script Execution Context
+# =========================================================================
+<#
+	Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
+#>
 
 
 

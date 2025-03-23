@@ -68,7 +68,7 @@ python310 -m pip install --upgrade pip
 # Remove the default R alias so that you can specify the version per application
 Remove-Item alias:R -Force
 
-## R 3.9
+## R 4.4.0
 ## ========================================================================
 
 choco install r.project --version=4.4.0 --params '"/InstallDir=C:\Program Files\R\R-4.4.0"' -y
