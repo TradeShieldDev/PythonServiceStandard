@@ -15,6 +15,7 @@ This spike shows the basic setup and structure that Python/R applications should
 - [x] Make use of a logger with file rollover (size/day) and archiving mechanism
 - [x] Include IsAlive / External Health Check
 - [ ] Low-level performance counters for Attempt-Success-Failure
+- [ ] Unit testing and Stubbing / Simulators
 
 
 ## General things to avoid in Python
@@ -29,7 +30,6 @@ This spike shows the basic setup and structure that Python/R applications should
 - [x] Always use [main.py] as the starting Python file for all applications
 - [ ] For sensitive information, define and use Environment Variables in the initial setup script (No Sensitive Information in Source Control)
 
-
 ## Example Services
 
 ### Schedule Example
@@ -42,3 +42,8 @@ This spike shows the basic setup and structure that Python/R applications should
 - [x]  FastAPI, including Standard Health API, extended with custom health checks
 
 ![image](https://github.com/user-attachments/assets/9cf4a864-d1ae-48c6-a5d5-da8d40e00c84)
+
+## CI/CD
+- [ ] JSON / INI Variable Replacement during deployment
+- [ ] Managing the Windows Services from Source Control
+- [ ] Running Unit Tests
