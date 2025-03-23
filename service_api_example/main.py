@@ -1,4 +1,4 @@
-from src.api_loader import start_apis
+from src.api.api_loader import start_apis
 from sdk.config.config_loader import ConfigManager
 from sdk.logging.logger import Logger
 from fastapi import FastAPI

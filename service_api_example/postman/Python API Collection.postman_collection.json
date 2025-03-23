@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "373eb6d6-15cd-4f03-84ff-1a76aecd118f",
+		"name": "Python API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "287800",
+		"_collection_link": "https://tsdevelopers.postman.co/workspace/Trade-Shield-Workspace~b33105ce-9939-4d8c-b4c6-f53553a396c6/collection/287800-373eb6d6-15cd-4f03-84ff-1a76aecd118f?action=share&source=collection_link&creator=287800"
+	},
+	"item": [
+		{
+			"name": "Calculator Sum",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImdGbnBlbmZNdFdEdlJjYUtKUWEzeUVfVldSNCIsImtpZCI6ImdGbnBlbmZNdFdEdlJjYUtKUWEzeUVfVldSNCJ9.eyJpc3MiOiJodHRwczovL2xvZ2luLmlub3hpY28uY29tL2lkZW50aXR5IiwiYXVkIjoiaHR0cHM6Ly9sb2dpbi5pbm94aWNvLmNvbS9pZGVudGl0eS9yZXNvdXJjZXMiLCJleHAiOjE3MzE1ODkwNTYsIm5iZiI6MTczMTU4NTQ1NiwiY2xpZW50X2lkIjoiQWRtaW4iLCJzY29wZSI6WyJvcGVuaWQiLCJwcm9maWxlIiwiZW1haWwiLCJyb2xlcyIsImFwaSJdLCJzdWIiOiI3MDgzYjU3NS1jNzU2LTRkMWEtYmFhMC0wMTYzM2IxZDU2YjAiLCJhdXRoX3RpbWUiOjE3MzE1ODU0NTEsImlkcCI6Imlkc3J2IiwiZW1haWwiOiJtYXJpdXN2QGlub3hpY28uY29tIiwiY2xpZW50X2FjY291bnQiOiJBMDAwMSIsInJvbGUiOlsiVHJhZGVTaGllbGRfQ2xpZW50X0RhdGFfSGVhbHRoIiwiUmVzZWFyY2hfQWRtaW4iLCJUcmFkZVNoaWVsZF9BZG1pbiIsIlRyYWRlU2hpZWxkX1BlcmZvcm1hbmNlIiwiVHJhZGVTaGllbGRfU3RhbmRhcmQiLCJQcm9qZWN0c19BZG1pbiIsIlRyYWRlU2hpZWxkX0lub3hpY29fQWRtaW4iLCJBZG1pbl9BZG1pbiIsIldvcmtmbG93X0ZhYnJpYyBSb2xlIE1hbmFnZW1lbnQiLCJQcm9maWxlcl9BZG1pbiIsIldvcmtmbG93X0ZhYnJpYyBUZWFtIE1hbmFnZW1lbnQiLCJXb3JrZmxvd19Jbm94aWNvIEZhYnJpYyBBZG1pbiIsIldvcmtmbG93X0ZhYnJpYyBSZXNlYXJjaCBRdWVzdGlvbm4iLCJXb3JrZmxvd19GYWJyaWMgQmFzaWMiLCJXb3JrZmxvd19DbGllbnQgRmFicmljIEFkbWluIiwiV29ya2Zsb3dfRmFicmljIENsaWVudCBNYW5hZ2VtZW50Il0sIm5hbWUiOiJtYXJpdXN2QGlub3hpY28uY29tIiwiZ2l2ZW5fbmFtZSI6Ik1hcml1cyIsImZhbWlseV9uYW1lIjoiVm9yc3RlciIsInVzZXJfbnVtYmVyIjoiVTA2MjUiLCJhbXIiOlsicGFzc3dvcmQiXX0.VlOjtnMCWsXdnTsE1PLKedF2HGj_zlIB08OgWFsTWk9ZoMAPZOyQpaAlbCB4QYRvYrhN0gzrcLnrKkXWG7qsRHNfFdKTqm75fEzG0wOyozt3D2EnDne4qgIB9ufwlwJ2zXHATJbo2cCEm0KZSPLpfs3SKr_Xf937uu1SSY612THVdol6yptodJGwxwvRM7jyewuFiSvHwYvfyk860RXwEWwcsLit_lz_cbXC7uOrATv3beraZCXUG01nCnXYE8pfxeRs4PPXFKhLEPYqo8fIGkwQWvpyTMQQ0dKHMlEjkSQqST70KYdjQwFbm3vQ1qivYd-S6jlQw5Qo0wDthERLOA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8181/calculator/sum?number_one=10&number_two=15",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8181",
+					"path": [
+						"calculator",
+						"sum"
+					],
+					"query": [
+						{
+							"key": "number_one",
+							"value": "10"
+						},
+						{
+							"key": "number_two",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculator Subtract",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImdGbnBlbmZNdFdEdlJjYUtKUWEzeUVfVldSNCIsImtpZCI6ImdGbnBlbmZNdFdEdlJjYUtKUWEzeUVfVldSNCJ9.eyJpc3MiOiJodHRwczovL2xvZ2luLmlub3hpY28uY29tL2lkZW50aXR5IiwiYXVkIjoiaHR0cHM6Ly9sb2dpbi5pbm94aWNvLmNvbS9pZGVudGl0eS9yZXNvdXJjZXMiLCJleHAiOjE3MzE1ODkwNTYsIm5iZiI6MTczMTU4NTQ1NiwiY2xpZW50X2lkIjoiQWRtaW4iLCJzY29wZSI6WyJvcGVuaWQiLCJwcm9maWxlIiwiZW1haWwiLCJyb2xlcyIsImFwaSJdLCJzdWIiOiI3MDgzYjU3NS1jNzU2LTRkMWEtYmFhMC0wMTYzM2IxZDU2YjAiLCJhdXRoX3RpbWUiOjE3MzE1ODU0NTEsImlkcCI6Imlkc3J2IiwiZW1haWwiOiJtYXJpdXN2QGlub3hpY28uY29tIiwiY2xpZW50X2FjY291bnQiOiJBMDAwMSIsInJvbGUiOlsiVHJhZGVTaGllbGRfQ2xpZW50X0RhdGFfSGVhbHRoIiwiUmVzZWFyY2hfQWRtaW4iLCJUcmFkZVNoaWVsZF9BZG1pbiIsIlRyYWRlU2hpZWxkX1BlcmZvcm1hbmNlIiwiVHJhZGVTaGllbGRfU3RhbmRhcmQiLCJQcm9qZWN0c19BZG1pbiIsIlRyYWRlU2hpZWxkX0lub3hpY29fQWRtaW4iLCJBZG1pbl9BZG1pbiIsIldvcmtmbG93X0ZhYnJpYyBSb2xlIE1hbmFnZW1lbnQiLCJQcm9maWxlcl9BZG1pbiIsIldvcmtmbG93X0ZhYnJpYyBUZWFtIE1hbmFnZW1lbnQiLCJXb3JrZmxvd19Jbm94aWNvIEZhYnJpYyBBZG1pbiIsIldvcmtmbG93X0ZhYnJpYyBSZXNlYXJjaCBRdWVzdGlvbm4iLCJXb3JrZmxvd19GYWJyaWMgQmFzaWMiLCJXb3JrZmxvd19DbGllbnQgRmFicmljIEFkbWluIiwiV29ya2Zsb3dfRmFicmljIENsaWVudCBNYW5hZ2VtZW50Il0sIm5hbWUiOiJtYXJpdXN2QGlub3hpY28uY29tIiwiZ2l2ZW5fbmFtZSI6Ik1hcml1cyIsImZhbWlseV9uYW1lIjoiVm9yc3RlciIsInVzZXJfbnVtYmVyIjoiVTA2MjUiLCJhbXIiOlsicGFzc3dvcmQiXX0.VlOjtnMCWsXdnTsE1PLKedF2HGj_zlIB08OgWFsTWk9ZoMAPZOyQpaAlbCB4QYRvYrhN0gzrcLnrKkXWG7qsRHNfFdKTqm75fEzG0wOyozt3D2EnDne4qgIB9ufwlwJ2zXHATJbo2cCEm0KZSPLpfs3SKr_Xf937uu1SSY612THVdol6yptodJGwxwvRM7jyewuFiSvHwYvfyk860RXwEWwcsLit_lz_cbXC7uOrATv3beraZCXUG01nCnXYE8pfxeRs4PPXFKhLEPYqo8fIGkwQWvpyTMQQ0dKHMlEjkSQqST70KYdjQwFbm3vQ1qivYd-S6jlQw5Qo0wDthERLOA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8181/calculator/subtract?number_one=10&number_two=15",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8181",
+					"path": [
+						"calculator",
+						"subtract"
+					],
+					"query": [
+						{
+							"key": "number_one",
+							"value": "10"
+						},
+						{
+							"key": "number_two",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calender Today",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImdGbnBlbmZNdFdEdlJjYUtKUWEzeUVfVldSNCIsImtpZCI6ImdGbnBlbmZNdFdEdlJjYUtKUWEzeUVfVldSNCJ9.eyJpc3MiOiJodHRwczovL2xvZ2luLmlub3hpY28uY29tL2lkZW50aXR5IiwiYXVkIjoiaHR0cHM6Ly9sb2dpbi5pbm94aWNvLmNvbS9pZGVudGl0eS9yZXNvdXJjZXMiLCJleHAiOjE3MzE1ODkwNTYsIm5iZiI6MTczMTU4NTQ1NiwiY2xpZW50X2lkIjoiQWRtaW4iLCJzY29wZSI6WyJvcGVuaWQiLCJwcm9maWxlIiwiZW1haWwiLCJyb2xlcyIsImFwaSJdLCJzdWIiOiI3MDgzYjU3NS1jNzU2LTRkMWEtYmFhMC0wMTYzM2IxZDU2YjAiLCJhdXRoX3RpbWUiOjE3MzE1ODU0NTEsImlkcCI6Imlkc3J2IiwiZW1haWwiOiJtYXJpdXN2QGlub3hpY28uY29tIiwiY2xpZW50X2FjY291bnQiOiJBMDAwMSIsInJvbGUiOlsiVHJhZGVTaGllbGRfQ2xpZW50X0RhdGFfSGVhbHRoIiwiUmVzZWFyY2hfQWRtaW4iLCJUcmFkZVNoaWVsZF9BZG1pbiIsIlRyYWRlU2hpZWxkX1BlcmZvcm1hbmNlIiwiVHJhZGVTaGllbGRfU3RhbmRhcmQiLCJQcm9qZWN0c19BZG1pbiIsIlRyYWRlU2hpZWxkX0lub3hpY29fQWRtaW4iLCJBZG1pbl9BZG1pbiIsIldvcmtmbG93X0ZhYnJpYyBSb2xlIE1hbmFnZW1lbnQiLCJQcm9maWxlcl9BZG1pbiIsIldvcmtmbG93X0ZhYnJpYyBUZWFtIE1hbmFnZW1lbnQiLCJXb3JrZmxvd19Jbm94aWNvIEZhYnJpYyBBZG1pbiIsIldvcmtmbG93X0ZhYnJpYyBSZXNlYXJjaCBRdWVzdGlvbm4iLCJXb3JrZmxvd19GYWJyaWMgQmFzaWMiLCJXb3JrZmxvd19DbGllbnQgRmFicmljIEFkbWluIiwiV29ya2Zsb3dfRmFicmljIENsaWVudCBNYW5hZ2VtZW50Il0sIm5hbWUiOiJtYXJpdXN2QGlub3hpY28uY29tIiwiZ2l2ZW5fbmFtZSI6Ik1hcml1cyIsImZhbWlseV9uYW1lIjoiVm9yc3RlciIsInVzZXJfbnVtYmVyIjoiVTA2MjUiLCJhbXIiOlsicGFzc3dvcmQiXX0.VlOjtnMCWsXdnTsE1PLKedF2HGj_zlIB08OgWFsTWk9ZoMAPZOyQpaAlbCB4QYRvYrhN0gzrcLnrKkXWG7qsRHNfFdKTqm75fEzG0wOyozt3D2EnDne4qgIB9ufwlwJ2zXHATJbo2cCEm0KZSPLpfs3SKr_Xf937uu1SSY612THVdol6yptodJGwxwvRM7jyewuFiSvHwYvfyk860RXwEWwcsLit_lz_cbXC7uOrATv3beraZCXUG01nCnXYE8pfxeRs4PPXFKhLEPYqo8fIGkwQWvpyTMQQ0dKHMlEjkSQqST70KYdjQwFbm3vQ1qivYd-S6jlQw5Qo0wDthERLOA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8181/calendar",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8181",
+					"path": [
+						"calendar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health Check",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImdGbnBlbmZNdFdEdlJjYUtKUWEzeUVfVldSNCIsImtpZCI6ImdGbnBlbmZNdFdEdlJjYUtKUWEzeUVfVldSNCJ9.eyJpc3MiOiJodHRwczovL2xvZ2luLmlub3hpY28uY29tL2lkZW50aXR5IiwiYXVkIjoiaHR0cHM6Ly9sb2dpbi5pbm94aWNvLmNvbS9pZGVudGl0eS9yZXNvdXJjZXMiLCJleHAiOjE3MzE1ODkwNTYsIm5iZiI6MTczMTU4NTQ1NiwiY2xpZW50X2lkIjoiQWRtaW4iLCJzY29wZSI6WyJvcGVuaWQiLCJwcm9maWxlIiwiZW1haWwiLCJyb2xlcyIsImFwaSJdLCJzdWIiOiI3MDgzYjU3NS1jNzU2LTRkMWEtYmFhMC0wMTYzM2IxZDU2YjAiLCJhdXRoX3RpbWUiOjE3MzE1ODU0NTEsImlkcCI6Imlkc3J2IiwiZW1haWwiOiJtYXJpdXN2QGlub3hpY28uY29tIiwiY2xpZW50X2FjY291bnQiOiJBMDAwMSIsInJvbGUiOlsiVHJhZGVTaGllbGRfQ2xpZW50X0RhdGFfSGVhbHRoIiwiUmVzZWFyY2hfQWRtaW4iLCJUcmFkZVNoaWVsZF9BZG1pbiIsIlRyYWRlU2hpZWxkX1BlcmZvcm1hbmNlIiwiVHJhZGVTaGllbGRfU3RhbmRhcmQiLCJQcm9qZWN0c19BZG1pbiIsIlRyYWRlU2hpZWxkX0lub3hpY29fQWRtaW4iLCJBZG1pbl9BZG1pbiIsIldvcmtmbG93X0ZhYnJpYyBSb2xlIE1hbmFnZW1lbnQiLCJQcm9maWxlcl9BZG1pbiIsIldvcmtmbG93X0ZhYnJpYyBUZWFtIE1hbmFnZW1lbnQiLCJXb3JrZmxvd19Jbm94aWNvIEZhYnJpYyBBZG1pbiIsIldvcmtmbG93X0ZhYnJpYyBSZXNlYXJjaCBRdWVzdGlvbm4iLCJXb3JrZmxvd19GYWJyaWMgQmFzaWMiLCJXb3JrZmxvd19DbGllbnQgRmFicmljIEFkbWluIiwiV29ya2Zsb3dfRmFicmljIENsaWVudCBNYW5hZ2VtZW50Il0sIm5hbWUiOiJtYXJpdXN2QGlub3hpY28uY29tIiwiZ2l2ZW5fbmFtZSI6Ik1hcml1cyIsImZhbWlseV9uYW1lIjoiVm9yc3RlciIsInVzZXJfbnVtYmVyIjoiVTA2MjUiLCJhbXIiOlsicGFzc3dvcmQiXX0.VlOjtnMCWsXdnTsE1PLKedF2HGj_zlIB08OgWFsTWk9ZoMAPZOyQpaAlbCB4QYRvYrhN0gzrcLnrKkXWG7qsRHNfFdKTqm75fEzG0wOyozt3D2EnDne4qgIB9ufwlwJ2zXHATJbo2cCEm0KZSPLpfs3SKr_Xf937uu1SSY612THVdol6yptodJGwxwvRM7jyewuFiSvHwYvfyk860RXwEWwcsLit_lz_cbXC7uOrATv3beraZCXUG01nCnXYE8pfxeRs4PPXFKhLEPYqo8fIGkwQWvpyTMQQ0dKHMlEjkSQqST70KYdjQwFbm3vQ1qivYd-S6jlQw5Qo0wDthERLOA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8181/calendar",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8181",
+					"path": [
+						"calendar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
