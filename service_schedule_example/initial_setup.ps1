@@ -81,9 +81,14 @@ $displayName = "Company Name - Schedule Example Service"
 #>
 
 
-
-
-
+# =========================================================================
+# Source Control - Add the SDK Submodule
+# =========================================================================
+<#
+	# Open the Poweshell script in the root folder of the application before running this
+	
+	git submodule add https://github.com/TradeShieldDev/SeedworksPython.git sdk
+#>
 
 
 
